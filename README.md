@@ -1,8 +1,6 @@
 # Aplikasi SPP Codeigniter 4
 
-## Tujuan Dibuat Aplikasi
-
-Aplikasi ini dibuat untuk sertifikasi kompetensi keahlian di SMKN 2 Kuningan. Dengan bimbingan dari Bapa Oya Suryana M.Kom. https://github.com/oyasuryana Selaku guru saya di SMK akhinya aplikasi ini dapat dibuat dan diselesaikan sesuai dengan dengan keinginan. Adapun jika dalam aplikasi ini terdapat bug, atau kekurangan mungkin itu semua terjadi atas kurang nya ilmu yang pelajari.
+Aplikasi ini dibuat untuk Uji Kompetensi Keahlian Rekayasa Perangkat Lunak di SMKN 2 Kuningan. Dengan bimbingan dari Bapa Oya Suryana M.Kom. https://github.com/oyasuryana Selaku guru saya di SMK akhinya aplikasi ini dapat dibuat dan diselesaikan sesuai dengan dengan keinginan. Adapun jika dalam aplikasi ini terdapat bug, atau kekurangan mungkin itu semua terjadi atas kurang nya ilmu yang saya pelajari.
 
 ## Instalasi
 
