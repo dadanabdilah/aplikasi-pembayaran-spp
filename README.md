@@ -22,13 +22,13 @@ Aplikasi ini dibuat untuk Uji Kompetensi Keahlian Rekayasa Perangkat Lunak di SM
 
 1. Login sebagai siswa
    - username : nis
-   - password : secara default password nya adalah(12345678)
-2. Login sebagai tu
+   - password : secara default password nya adalah(123)
+2. Login sebagai petugas
    - username : email
-   - password : secara default password nya adalah(12345678)
+   - password : secara default password nya adalah(123)
 3. Login sebagai admin
    - username : email(yang terdaftar sebagai admin)
-   - password : secara default password nya adalah(12345678)
+   - password : secara default password nya adalah(123)
 
 ## Kebutuhan server
 
