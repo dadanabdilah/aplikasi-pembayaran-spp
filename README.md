@@ -32,4 +32,4 @@ Aplikasi ini dibuat untuk Uji Kompetensi Keahlian Rekayasa Perangkat Lunak di SM
 
 ## Kebutuhan server
 
-PHP versi 7.3 atau versi terbaru.
+PHP versi 7.2 atau versi terbaru.
