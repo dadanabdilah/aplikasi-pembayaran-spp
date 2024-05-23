@@ -57,15 +57,13 @@ class User extends BaseController
 
 	public function tambah()
 	{
-		// form validation submit
-		// $this->form_validation->set_rules('username', 'Username', 'callback_CheckUsername');
 		
-		    $data = [
-					'nama_user'  =>  $this->request->getPost('nama_user'),
-					'username'	 =>  $this->request->getPost('username'),
-					'password'	 =>  $this->request->getPost('password'),
-					'level'	     =>  $this->request->getPost('level'),
-				];
+		$data = [
+				'nama_user'  =>  $this->request->getPost('nama_user'),
+				'username'	 =>  $this->request->getPost('username'),
+				'password'	 =>  $this->request->getPost('password'),
+				'level'	     =>  $this->request->getPost('level'),
+			];
 			
 		if ($this->user->insert($data)){
 
@@ -85,16 +83,6 @@ class User extends BaseController
 	   	}
 		
 	}
-
-		// //controller CheckUsername
-		// function CheckUsername($username){
-		//    if ($this->model->check_username($username)==''){
-		//       return true;
-		//    }else{
-		//       $this->form_validation->set_message('username', 'Username '. $username .' telah terdaftar');
-		//       return false;		
-		//    }
-		// }
 
 
 	public function ubah()

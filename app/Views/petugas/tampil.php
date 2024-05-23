@@ -84,17 +84,10 @@
                                             <label for="exampleFormControlInput1">Email</label>
                                             <input type="text" class="form-control" id="email" name="email" placeholder="Masukan email" autocomplete="off">
                                         </div>
-                                        <!-- <div id="hide-password" class="form-group">
+                                        <div id="hide-password" class="form-group">
                                             <label class="exampleFormControlInput1">Password</label>
                                             <input type="password" name="password" id="password" class="form-control" placeholder="Masukan password" autocomplete="off">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="exampleFormControlInput1">Level Petugas</label>
-                                            <select name="level" id="level" class="form-control">
-                                                <option value="admin">Admin SPP</option>
-                                                <option value="petugas">Petugas SPP</option>
-                                            </select>
-                                        </div> -->
 
                                         <div class="modal-footer mb-0">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

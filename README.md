@@ -7,29 +7,33 @@ Aplikasi ini dibuat untuk Uji Kompetensi Keahlian Rekayasa Perangkat Lunak di SM
 1.  Intalasi pada online hosting.
     1. Upload source code ke hosting anda.
     2. Pindahkan file file yang ada pada folder public ke public_html hosting anda.
-    3. Buka file index.php dan lakukan konfihurasi ulang. 
-    4. Rename file .env menjadi env
-    5. Import database aplikasi-spp ke server database anda
-    6. Testing.
+    3. Buka file index.php dan lakukan konfigurasi ulang. 
+    4. Ubah file env jadi .env
+    5. Konfigurasi nama database di file .env
+    6. Migrasi database ke server jalankan php spark migrate
+    7. Jalankan php spark db:seeder lalu ketik UserSeeder
+    8. Testing.
 2.  Intalasi pada localhost.
     1. Silahkan unduh source code dan ekstrak source code nya.
-    5. Import database aplikasi-spp ke server database anda.
-    6. Jalankan cmd, lalu arahkan ke direktori aplikasi-spp
-    7. Ketik php spark serve, dan buka almat url http://localhost:port pada browser.
-    8. Testing.
+    2. Ubah file env jadi .env
+    3. Konfigurasi nama database di file .env
+    4. Jalankan cmd, lalu arahkan ke direktori aplikasi-spp ketik php spark migrate
+    5. Ketikan php spark db:seeder lalu ketik UserSeeder.
+    6. Ketik php spark migrate, dan buka almat url http://localhost:port pada browser.
+    7. Testing.
 
 ## Penggunaan
 
 1. Login sebagai siswa
    - username : nis
-   - password : secara default password nya adalah(123)
+   - password : secara default password nya adalah nis
 2. Login sebagai petugas
    - username : email
-   - password : secara default password nya adalah(123)
+   - password : secara default password nya adalah(123456)
 3. Login sebagai admin
-   - username : email(yang terdaftar sebagai admin)
-   - password : secara default password nya adalah(123)
+   - username : admin@gmail.com
+   - password : secara default password nya adalah(admin)
 
 ## Kebutuhan server
 
-PHP versi 7.2 atau versi terbaru.
+PHP versi 7.4 atau versi terbaru.

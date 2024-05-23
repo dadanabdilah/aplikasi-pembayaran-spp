@@ -62,6 +62,7 @@
                                                     </select>
                                                 </div>
 
+                                                <small>Default password siswa adalah pakai nim</small>
                                                 <div class="mb-0">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <button type="subtmit" class="btn btn-primary">Simpan</button>

@@ -38,10 +38,15 @@ class Petugas extends BaseController
 		$data = [
 					'nama_petugas' => $this->request->getPost('nama_lengkap'),
 					'email'     => $this->request->getPost('email'),
-					// 'password'     => md5($this->request->getPost('password')),
-					// 'level'        => $this->request->getPost('level')
 				];
 		$this->petugas->insert($data);
+
+		$this->user->insert([
+			'nama_user' => $this->request->getPost('nama_lengkap'),
+			'username' => $this->request->getPost('email'),
+			'password' => md5('123456'),
+			'level' => 'petugas'
+		]);
 
 		$session_pesan = 	[
 								'status' => 'Data petugas berhasil ditambahkan',
@@ -60,13 +65,14 @@ class Petugas extends BaseController
 		    'id_petugas'   => $this->request->getPost('id_petugas'),
 		    'nama_petugas' => $this->request->getPost('nama_lengkap'),
 			'email'     => $this->request->getPost('email'),
-			// 'password'     => md5($this->request->getPost('password')),
-			// 'level'        => $this->request->getPost('level')
 		];
-		// $this->petugas->where('id_petugas', $id);
-		// $this->petugas->update($data);
 
 		$this->petugas->save($data);
+
+		$this->user->where('username', $this->request->getPost('email'))->set([
+			'nama_user' => $this->request->getPost('nama_lengkap'),
+			'username' => $this->request->getPost('email'),
+		])->update();
 
 		$session_pesan = 	[
 								'status' => 'Data petugas berhasil diubah',
@@ -97,32 +103,4 @@ class Petugas extends BaseController
 			return redirect()->to('/petugas/tampil');
 		}
 	}
-
-// 	public function ubahPassword()
-// 	{
-// 		$data = [
-// 					'title'      => 'Ubah Password',
-// 					'sub_title'  => 'Ubah Password',
-// 				];
-// 		return view('petugas/ubah-password',$data);
-// 	}
-
-// 	public function simpanPassword()
-// 	{
-// 		$data = [
-// 		    'id_petugas' => $this->request->getPost('id_petugas'),
-// 		    'password'   => md5($this->request->getPost('password_baru')),
-// 		];
-// 		$this->petugas->save($data);
-// 		return redirect()->to('/logout');
-// 	}
-
-// 	public function resetPassword($id){
-// 		$data = [
-// 		    'id_petugas' => $id,
-// 		    'password'   => md5('123'),
-// 		];
-// 		$this->petugas->save($data);
-// 		return redirect()->to('/petugas/tampil');
-// 	}
 }

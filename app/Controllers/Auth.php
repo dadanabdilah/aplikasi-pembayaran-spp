@@ -37,14 +37,6 @@ class Auth extends BaseController
 
 
 				if ($data_petugas[0]['password'] == md5($this->request->getPost('ipassword'))) {
-
-					// $session_data = [
-					// 	'id_petugas'    => $data_petugas[0]['id_petugas'],
-					// 	'username'		=> $data_petugas[0]['username'],
-					// 	'nama_petugas'	=> $data_petugas[0]['nama_petugas'],
-					// 	'level'   		=> $data_petugas[0]['level'],
-					// 	'sudah_login'   => TRUE
-					// ];
 					$session_data = [
 						'id_user'    	=> $data_petugas[0]['id_user'],
 						'username'		=> $data_petugas[0]['username'],
@@ -54,7 +46,6 @@ class Auth extends BaseController
 					];
 
 					$this->session->set($session_data);
-					// session()->set($session_data);	
 					return redirect()->to('/dashboard');
 				} else {
 					$flash_data = [
@@ -62,7 +53,6 @@ class Auth extends BaseController
 						'username'		=> $this->request->getPost('iusername'),
 					];
 					session()->setFlashdata($flash_data);
-					// session()->setFlashdata('username',$this->request->getPost('iusername');
 					return redirect()->to('/login');
 				}
 			} else {
@@ -94,14 +84,6 @@ class Auth extends BaseController
 			if (count($data_petugas) == 1) {
 
 				if ($data_petugas[0]['password'] == md5($this->request->getPost('ipassword'))) {
-
-					// $session_data = [
-					// 	'id_petugas'    => $data_petugas[0]['id_petugas'],
-					// 	'username'		=> $data_petugas[0]['username'],
-					// 	'nama_petugas'	=> $data_petugas[0]['nama_petugas'],
-					// 	'level'   		=> $data_petugas[0]['level'],
-					// 	'sudah_login'   => TRUE
-					// ];
 					$session_data = [
 						'id_user'    	=> $data_petugas[0]['id_user'],
 						'username'		=> $data_petugas[0]['username'],
@@ -111,7 +93,6 @@ class Auth extends BaseController
 					];
 
 					$this->session->set($session_data);
-					// session()->set($session_data);	
 					return redirect()->to('/dashboard');
 				} else {
 					$flash_data = [
@@ -119,12 +100,10 @@ class Auth extends BaseController
 						'username'		=> $this->request->getPost('iusername'),
 					];
 					session()->setFlashdata($flash_data);
-					// session()->setFlashdata('username',$this->request->getPost('iusername');
 
 					return redirect()->to('/petugas');
 				}
 			} else {
-				// d($data_petugas);
 				session()->setFlashdata('status','Username salah');
 				return redirect()->to('/petugas');
 			}

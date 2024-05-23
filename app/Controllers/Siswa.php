@@ -125,6 +125,14 @@ class Siswa extends BaseController
 					'id_spp'      => $this->request->getPost('id_spp')
 				];
 		$this->siswa->insert($data);
+
+		$this->user->insert([
+			'nama_user' => $this->request->getPost('nama_siswa'),
+			'username' => $this->request->getPost('nis'),
+			'password' => md5($this->request->getPost('nis')),
+			'level' => 'siswa'
+		]);
+
 		$session_pesan = [
 							'status' => 'Data siswa berhasil ditambahkan',
 							'status-icon' => 'success',
@@ -149,9 +157,14 @@ class Siswa extends BaseController
 						'alamat'	  => $this->request->getPost('alamat'),
 						'no_telp'	  => $this->request->getPost('no_telp'),
 					];
-			$this->siswa->save($data);
 
-			$this->siswa->insert($data);
+			$this->siswa->save($data);
+			
+			$this->user->where('username', $this->request->getPost('nis'))->set([
+				'nama_user' => $this->request->getPost('nama_siswa'),
+				'username' => $this->request->getPost('nis'),
+			])->update();
+
 			$session_pesan = [
 								'status' => 'Data siswa berhasil diubah',
 								'status-icon' => 'success',
@@ -173,6 +186,11 @@ class Siswa extends BaseController
 					];
 			$this->siswa->save($data);
 
+			$this->user->where('username', $this->request->getPost('nis'))->set([
+				'nama_user' => $this->request->getPost('nama_siswa'),
+				'username' => $this->request->getPost('nis'),
+			])->update();
+
 			$session_pesan = [
 								'status' => 'Data siswa berhasil diubah',
 								'status-icon' => 'success',
@@ -186,8 +204,6 @@ class Siswa extends BaseController
 
 	public function hapus($nis)
 	{
-		
-
 		if (siswaInBayar($nis)==0) {
 			$this->siswa->where('nis',$nis);
 			$this->siswa->delete();

@@ -17,7 +17,7 @@ class SiswaModel extends Model
 	protected $allowedFields        = ['nisn','nis','nama_siswa','jk','alamat','no_telp','id_kelas','id_spp'];
 
 	// Dates
-	protected $useTimestamps        = false;
+	protected $useTimestamps        = true;
 	protected $dateFormat           = 'datetime';
 	protected $createdField         = 'created_at';
 	protected $updatedField         = 'updated_at';

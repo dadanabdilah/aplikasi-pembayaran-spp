@@ -53,7 +53,8 @@ class BaseController extends Controller
 	protected $user;
 	protected $siswa;
 	protected $petugas;
-	protected $pemabayaran;
+	protected $pembayaran;
+	protected $uri;
 
 	protected $req;
 
